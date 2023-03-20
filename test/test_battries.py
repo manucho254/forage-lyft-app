@@ -9,10 +9,10 @@ class TestNubbin(unittest.TestCase):
     def setUp(self) -> None:
         self.current_date: datetime = datetime.today().date()
         self.last_service_date: datetime = datetime.today().date()
-        self.battery: NubbinBattery = None
+        self.nubbin: NubbinBattery = None
 
     def create_nubbin_battery(self):
-        self.battery = NubbinBattery(self.current_date, self.last_service_date)
+        self.nubbin = NubbinBattery(self.current_date, self.last_service_date)
 
     def test_battery_should_be_serviced(self):
         self.last_service_date = self.current_date.replace(
@@ -20,7 +20,7 @@ class TestNubbin(unittest.TestCase):
         )
 
         self.create_nubbin_battery()
-        self.assertTrue(self.battery.needs_service())
+        self.assertTrue(self.nubbin.needs_service())
 
     def test_battery_should_not_be_serviced(self):
         self.last_service_date = self.current_date.replace(
@@ -28,17 +28,17 @@ class TestNubbin(unittest.TestCase):
         )
 
         self.create_nubbin_battery()
-        self.assertFalse(self.battery.needs_service())
+        self.assertFalse(self.nubbin.needs_service())
 
 
 class TestSpindler(unittest.TestCase):
     def setUp(self) -> None:
         self.current_date: datetime = datetime.today().date()
         self.last_service_date: datetime = datetime.today().date()
-        self.battery: SpindlerBattery = None
+        self.spindler: SpindlerBattery = None
 
     def create_spindler_battery(self):
-        self.battery = SpindlerBattery(self.current_date, self.last_service_date)
+        self.spindler = SpindlerBattery(self.current_date, self.last_service_date)
 
     def test_battery_should_be_serviced(self):
         self.last_service_date = self.current_date.replace(
@@ -46,7 +46,7 @@ class TestSpindler(unittest.TestCase):
         )
 
         self.create_spindler_battery()
-        self.assertTrue(self.battery.needs_service())
+        self.assertTrue(self.spindler.needs_service())
 
     def test_battery_should_not_be_serviced(self):
         self.last_service_date = self.current_date.replace(
@@ -54,7 +54,7 @@ class TestSpindler(unittest.TestCase):
         )
 
         self.create_spindler_battery()
-        self.assertFalse(self.battery.needs_service())
+        self.assertFalse(self.spindler.needs_service())
 
 
 if __name__ == "__main__":
