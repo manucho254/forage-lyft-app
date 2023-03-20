@@ -11,17 +11,17 @@
 - created different folder and files that would have the classes of the different car Component like the Engine, Battery and Tire.
 
 - The various types of Engines were:	
-   > Capulet Engine -> Servicing criteria Once every 30,000 miles
-   > Willoughby Engine -> Servicing criteria is Once every 60,000 miles
-   > Sternman Engine -> Servicing criteria is Only when the warning indicator is on
+   > Capulet Engine -> Servicing criteria Once every 30,000 miles. <br>
+   > Willoughby Engine -> Servicing criteria is Once every 60,000 miles. </br>
+   > Sternman Engine -> Servicing criteria is Only when the warning indicator is on. </br>
 
 - The various types of Batteries were:
-   > Spindler Batter -> Servicing criteria is Once every 2 years
-   > Nubbin Battery	-> Servicing criteria Once every 4 years
+   > Spindler Batter -> Servicing criteria is Once every 2 years. </br>
+   > Nubbin Battery	-> Servicing criteria Once every 4 years. </br>
 
 - The various types of Tires were:
-   > Carrigan tires  - If any value of an array containing 4 values and each value is in the range of 0 through 1 contains a value greater than 0.9
-   > Octoprime tires. - If sum of an array containing 4 values and each value is in the range of 0 through 1 greater or equal to 3
+   > Carrigan tires  - If any value of an array containing 4 values and each value is in the range of 0 through 1 contains a value greater than 0.9. </br>
+   > Octoprime tires - If sum of an array containing 4 values and each value is in the range of 0 through 1 greater or equal to 3. </br>
 
 
 I changed my project structure now to:
@@ -35,7 +35,7 @@ engines:
     |
 test:
     |
-    
+
 tires:
     |
     __init__.py
