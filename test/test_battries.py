@@ -42,7 +42,7 @@ class TestSpindler(unittest.TestCase):
 
     def test_battery_should_be_serviced(self):
         self.last_service_date = self.current_date.replace(
-            year=self.current_date.year - 3
+            year=self.current_date.year - 4
         )
 
         self.create_spindler_battery()
