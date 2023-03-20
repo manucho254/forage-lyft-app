@@ -209,7 +209,7 @@ class TestThovex(unittest.TestCase):
         self.car: Car = None
 
     def create_thovex_car(self):
-        """function to create a car of type glissade"""
+        """function to create a car of type thovex"""
         self.car = car_factory.create_thovex(
             self.current_date,
             self.last_service_date,
