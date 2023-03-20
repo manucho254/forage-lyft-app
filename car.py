@@ -17,18 +17,10 @@ class Car(Serviceable):
         self.battery: Battery = battery
 
     def needs_service(self) -> bool:
-        return self.engine.needs_service() or  self.battery.needs_service()
-        
+        return self.engine.needs_service() or self.battery.needs_service()
 
 
 class carFactory:
-    def __init__(self):
-        self.current_date: datetime = datetime.today()
-        self.last_service_date: datetime = None
-        self.warning_light_on: bool = False
-        self.current_mileage: int = 0
-        self.last_service_mileage: int = 0
-
     def create_calliope(
         self,
         current_date: datetime,
@@ -57,7 +49,7 @@ class carFactory:
         last_service_date: datetime,
         warning_light_on: bool,
     ) -> Car:
-        
+
         sternman_engine = SternmanEngine(warning_light_on)
         spindler_battery = SpindlerBattery(current_date, last_service_date)
         return Car(sternman_engine, spindler_battery)
